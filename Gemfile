@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 
 
 gem "mocha", group: :test
+
+gem "font-awesome-rails"
