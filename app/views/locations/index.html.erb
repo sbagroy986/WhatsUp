@@ -133,15 +133,15 @@
           
           <!--******************** Portfolio Section ********************-->
             <div class="span4">
-            <div class="mask2"> <a href="img/portfolio-01.jpg" rel="prettyPhoto"><img src="img/portfolio-01.jpg" alt=""></a> </div>
+            <div class="mask2"> <%= image_tag location.photo, :size=> '200x200' %></div>
             <div class="inside">
-              <div style="padding-top:75px"></div>
+              <div style=""></div>
               <hgroup>
                 <h2><%= location.address %></h2>
               </hgroup>
               <div class="entry-content">
                 <p><%= location.message %></p>
-                <p class="more-link" ><%= link_to 'VIEW PROJECT', location %></p> </div>
+                <p class="more-link" ><%= link_to 'show', location %></p> </div>
             </div>
             <div style="padding-bottom:200px"></div>
             <!-- /.inside -->
@@ -171,10 +171,9 @@
                               <!--******************** Team Section ********************-->
                               
                               
-                              <footer>
-            <div style="padding-top:300px"></div>
-            <div class="container">
-                <div class="row">
+                              <!--<footer>
+            
+                
                     <div class="col-lg-10 col-lg-offset-1 text-center">
                         <h4><strong>What's Up</strong>
                         </h4>
@@ -197,11 +196,10 @@
                             </li>
                         </ul>
                         <hr class="small">
-                        
-                    </div>
+                    
                 </div>
-            </div>
-        </footer>
+            
+        </footer> -->
                               
                               <!-- Loading the javaScript at the end of the page -->
                               <script type="text/javascript" src="js/bootstrap.js"></script>
