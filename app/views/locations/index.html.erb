@@ -140,7 +140,7 @@
               <div class="entry-content">
                 <p><%= location.message %></p>
                 <p class="more-link" ><%= link_to 'VIEW ACTIVITY', location %></p> </div>
-                <%= link_to 'Delete', destroy_user_session_path, :method => :delete %>
+                <%= link_to 'Delete', location, :method => :delete %>
             </div>
             <div style="padding-bottom:60px"></div>
             <!-- /.inside -->
