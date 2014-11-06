@@ -8,6 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+ 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+ 
+    <!-- font awesome css -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -27,30 +40,7 @@
     <body>
 
         <!-- Navigation -->
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li class="sidebar-brand">
-                    <a href="#top">Start Bootstrap</a>
-                </li>
-                <li>
-                    <a href="#top">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        
 
         <!-- Header -->
         <header id="top" class="header">
@@ -58,8 +48,17 @@
                 <h1>What's Up</h1>
                 <h3>Never get bored again</h3>
                 <br>
-                <a href="" class="btn btn-dark btn-lg"><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn btn-dark btn-lg' %></a>
-            </div>
+        
+  
+                
+                
+                <div class='modal-body-right' style="padding-right:200px">
+                        <div class="modal-social-icons">
+                            <a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook),:class=>"btn btn-default facebook" %> </a>
+                            
+                        
+                    </div>  
+           
         </header>
 
         <!-- About -->
@@ -83,7 +82,7 @@
                 <div class="row text-center">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2>What we do</h2>
-                        <hr class="small">
+                        <hr class="small" style="padding-left:700px">
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="service-item">
@@ -174,7 +173,7 @@
                             </li>
                         </ul>
                         <hr class="small">
-                        <p class="text-muted">Copyright &copy; WhatsUp 2014</p>
+                        
                     </div>
                 </div>
             </div>
