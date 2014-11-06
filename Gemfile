@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3' group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'devise'
@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'paperclip'
 gem 'carrierwave'
+group :production do
+  gem 'pg',             '0.17.1'
+  end
 
 
 # Use ActiveModel has_secure_password
