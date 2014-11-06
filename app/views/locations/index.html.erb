@@ -102,7 +102,7 @@
                     <h3 style="color:white">Search for locations to find out what's up!</h3>
                   <%= form_tag locations_path, :method => :get do %>
           <p>
-            <%= text_field_tag :search, params[:search], :class =>'cform-text' %>
+            <%= text_field_tag :search, params[:search], :class =>'cform-text', :placeholder => 'Search for a place (Format: Street/Area,City)' %>
             <%= submit_tag "Search Near", :name => nil %>
           </p>
           <% end %>
@@ -131,7 +131,7 @@
           
           <!--******************** Portfolio Section ********************-->
             <div class="span4">
-            <div class="mask2"> <%= image_tag location.photo, :size=> '200x200' %></div>
+            <div class="mask2"> <%= image_tag location.photo, :size=> '150x150' %></div>
             <div class="inside">
               <div style=""></div>
               <hgroup>
@@ -141,7 +141,7 @@
                 <p><%= location.message %></p>
                 <p class="more-link" ><%= link_to 'show', location %></p> </div>
             </div>
-            <div style="padding-bottom:200px"></div>
+            <div style="padding-bottom:60px"></div>
             <!-- /.inside -->
           </div>
                     <% end %>
