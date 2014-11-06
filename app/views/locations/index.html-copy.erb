@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Home - WhatsUp</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Styles -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
+      <link href="css/fontello.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 7]>
+            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+            <![endif]-->
+            <!-- Google Web fonts -->
+            <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+            <style>
+            body {
+              padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+            </style>
+            <link href="css/bootstrap-responsive.css" rel="stylesheet">
+            <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]-->
+          <!-- Favicon -->
+          <link rel="shortcut icon" href="img/favicon.ico">
+          <!-- JQuery -->
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <!-- Load ScrollTo -->
+          <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+          <!-- Load LocalScroll -->
+          <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+          <!-- prettyPhoto Initialization -->
+          <script type="text/javascript" charset="utf-8">
+          $(document).ready(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+          });
+          </script>
+        </head>
+        <body>
+
+          <link href="css/bootstrap-responsive.css" rel="stylesheet">
+          <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]-->
+          <!-- Favicon -->
+          <link rel="shortcut icon" href="img/favicon.ico">
+          <!-- JQuery -->
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <!-- Load ScrollTo -->
+          <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+          <!-- Load LocalScroll -->
+          <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+          <!-- prettyPhoto Initialization -->
+          <script type="text/javascript" charset="utf-8">
+          $(document).ready(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+          });
+          </script>
+        </head>
+        <body>
+          <!--******************** NAVBAR ********************-->
+          <div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            
+            <h1 class="brand"><a href="#top">WhatsUp!</a></h1>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            
+              <ul id="menu-main" class="nav">
+             
+                <li style="color:white;padding-top:15px;padding-left:550px"><%= link_to 'Check In', new_location_path %></li>
+                <li style="color:white;padding-top:15px"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+              </ul>
+       
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.navbar-inner -->
+      </div>
+      <!-- /.navbar -->
+    </div>
+    <!-- /.navbar-wrapper -->
+    <div id="top"></div>
+          <!-- ******************** HeaderWrap ********************-->
+          <div id="headerwrap">
+            <header class="clearfix">
+              <h1><span>Welcome to WhatsUp!</span></h1>
+                <p style="font-size:25px;color:white">We try to make your life a little more colourful. </p>
+              <div class="container">
+                <div class="row">
+                  <div class="span12">
+                    <h3 style="color:white">Search for locations to find out what's up!</h3>
+                  <%= form_tag locations_path, :method => :get do %>
+          <p>
+            <%= text_field_tag :search, params[:search], :class =>'cform-text', :placeholder => 'Search for a place (Format: Street/Area,City)' %>
+            <%= submit_tag "Search Near", :name => nil %>
+          </p>
+          <% end %>
+                  
+                  </div>
+                </div>
+                
+              </div>
+            </header>
+          </div>
+          <!--******************** Feature ********************-->
+          
+            </section>
+          </div>
+          <hr>
+          <br>
+
+          
+             
+              <% @locations.each do |location| %>
+             
+            
+          
+
+
+          
+          <!--******************** Portfolio Section ********************-->
+            <div class="span4">
+            <div class="mask2"> <%= image_tag location.photo, :size=> '150x150' %></div>
+            <div class="inside">
+              <div style=""></div>
+              <hgroup>
+                <h2><%= location.address %></h2>
+              </hgroup>
+              <div class="entry-content">
+                <p><%= location.message %></p>
+                <p class="more-link" ><%= link_to 'show', location %></p> </div>
+            </div>
+            <div style="padding-bottom:60px"></div>
+            <!-- /.inside -->
+          </div>
+                    <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+                      </section>
+                      
+                      <!--******************** Services Section ********************-->
+                      
+                      <!--******************** Testimonials Section ********************-->
+                      
+                      <!--******************** News Section ********************-->
+                      
+                              <!--******************** Team Section ********************-->
+                              
+                              
+                              <!--<footer>
+            
+                
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4><strong>What's Up</strong>
+                        </h4>
+                        <p>IIITD<br>Okhla,Phase-3</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-phone fa-fw"></i> 9871228952</li>
+                            <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">shrey14099@iiitd.ac.in</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                    
+                </div>
+            
+        </footer> -->
+                              
+                              <!-- Loading the javaScript at the end of the page -->
+                              <script type="text/javascript" src="js/bootstrap.js"></script>
+                              <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+                              <script type="text/javascript" src="js/site.js"></script>
+
+                              <!--ANALYTICS CODE-->
+                              <script type="text/javascript">
+                              var _gaq = _gaq || [];
+                              _gaq.push(['_setAccount', 'UA-29231762-1']);
+                              _gaq.push(['_setDomainName', 'dzyngiri.com']);
+                              _gaq.push(['_trackPageview']);
+
+                              (function() {
+                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                              })();
+                              </script>
+                            </body>
+                            </html>

@@ -1,0 +1,106 @@
+/* -------------------------------------------------------
+
+	Description: Rectangle Social Buttons
+	Version: 1.0
+	Author: Anli Zaimi
+	Author URI: http://azmind.com
+
+------------------------------------------------------- */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: url(images/bg.jpg) top left repeat;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#buttons {
+	width: 520px;
+	height: 480px;
+	margin: 80px auto 0 auto;
+	padding: 0 40px 0 80px;
+	background: url(images/buttons-bg.png) center center no-repeat;
+}
+
+.button {
+	float: left;
+	width: 90px;
+	height: 126px;
+	margin: 0 0 20px 20px;
+}
+
+.popup {
+	width: 90px;
+	height: 31px;
+	padding: 3px 0 5px 0;
+	background: url(images/popup.png) top center no-repeat;
+	color: #fff;
+	font-size: 13px;
+	line-height: 13px;
+	font-family: Georgia, serif;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+.button a {
+	position: relative;
+	width: 90px;
+	height: 82px;
+	display: block;
+}
+.button a:active { top: 2px; }
+
+
+a.facebook { background: url(images/facebook.png) top center no-repeat; }
+a.facebook:active { background: url(images/facebook-pushed.png) top center no-repeat; }
+
+a.twitter { background: url(images/twitter.png) top center no-repeat; }
+a.twitter:active { background: url(images/twitter-pushed.png) top center no-repeat; }
+
+a.dribble { background: url(images/dribble.png) top center no-repeat; }
+a.dribble:active { background: url(images/dribble-pushed.png) top center no-repeat; }
+
+a.flickr { background: url(images/flickr.png) top center no-repeat; }
+a.flickr:active { background: url(images/flickr-pushed.png) top center no-repeat; }
+
+a.yahoo { background: url(images/yahoo.png) top center no-repeat; }
+a.yahoo:active { background: url(images/yahoo-pushed.png) top center no-repeat; }
+
+a.stumbleupon { background: url(images/stumbleupon.png) top center no-repeat; }
+a.stumbleupon:active { background: url(images/stumbleupon-pushed.png) top center no-repeat; }
+
+a.youtube { background: url(images/youtube.png) top center no-repeat; }
+a.youtube:active { background: url(images/youtube-pushed.png) top center no-repeat; }
+
+a.technorati { background: url(images/technorati.png) top center no-repeat; }
+a.technorati:active { background: url(images/technorati-pushed.png) top center no-repeat; }
+
+a.googleplus { background: url(images/googleplus.png) top center no-repeat; }
+a.googleplus:active { background: url(images/googleplus-pushed.png) top center no-repeat; }
+
+a.delicious { background: url(images/delicious.png) top center no-repeat; }
+a.delicious:active { background: url(images/delicious-pushed.png) top center no-repeat; }
+
+a.pinterest { background: url(images/pinterest.png) top center no-repeat; }
+a.pinterest:active { background: url(images/pinterest-pushed.png) top center no-repeat; }
+
+a.rss { background: url(images/rss.png) top center no-repeat; }
+a.rss:active { background: url(images/rss-pushed.png) top center no-repeat; }
+
+
+
+#footer {
+	width: 600px;
+	margin: 30px auto 60px auto;
+	font-size: 15px;
+	font-weight: bold;
+	color: #835e54;
+	text-shadow: 1px 2px 0 #efac95;
+}
+
+#footer a { color: #835e54; text-decoration: none; border-bottom: 1px dashed #835e54; }
+#footer a:hover { color: #835e54; text-decoration: none; border: 0; }
+
+

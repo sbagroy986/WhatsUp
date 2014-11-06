@@ -11,17 +11,23 @@
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
- 
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
- 
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
- 
+
     <!-- font awesome css -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 
-
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!-- jQuery Easing Plugin -->
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <!-- Animations -->
+    <script type="text/javascript" src="js/animations.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -33,46 +39,46 @@
 
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    -->
+-->
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- Navigation -->
-        
+    <!-- Navigation -->
 
-        <!-- Header -->
-        <header id="top" class="header">
-            <div class="text-vertical-center">
-                <h1>What's Up</h1>
-                <h3>Never get bored again</h3>
-                <br>
-        
-  
-                
-                
-                <div class='modal-body-right' style="padding-right:200px">
-                        <div class="modal-social-icons">
-                            <a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook),:class=>"btn btn-default facebook" %> </a>
-                            
-                        
-                    </div>  
+
+    <!-- Header -->
+    <header id="top" class="header" style="height:200px">
+        <div class="text-vertical-center">
+            <h1 style="padding-top:200px">What's Up</h1>
+            <h3>Never get bored again</h3>
+            <br>
+            <div class='modal-body-right' style="padding-right:200px">
+                <div class="modal-social-icons">
+               
+                </div> 
            
-        </header>
-
-        <!-- About -->
+            <div>
+                <div id="buttons">
+                <div style="padding-left:225px ">
+                    <div class="button">
+                        <!-- <div class="popup pfacebook">facebook</div> -->
+                        <%= link_to '',user_omniauth_authorize_path(:facebook),:class=>"facebook" %>
+                    </div> 
+                </div>
+                </div></div>
+ </header>
+                <!-- About -->
         <section id="about" class="about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>What exactly is Whatsup?</h2>
-                        <p class="lead">Lets find out.</p>
+                        <h2>What exactly is WhatsUp ?</h2>
+                        <p class="lead">WhatsUp is our Overnight Hackathon app on the topic crowdsourcing. Lets see what it does.</p>
                     </div>
                 </div>
-                <!-- /.row -->
             </div>
-            <!-- /.container -->
         </section>
 
         <!-- Services -->
@@ -148,7 +154,7 @@
 
 
         <!-- Footer -->
-        <footer>
+        <!-- <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -177,7 +183,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
