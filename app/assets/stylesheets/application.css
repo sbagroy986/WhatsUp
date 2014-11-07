@@ -7288,7 +7288,7 @@ body {
 .button a:active { top: 2px; }
 
 
-a.facebook { background: url(facebook.png) top center no-repeat; }
+a.facebook { background-image: url('facebook.png'); ; }
 a.facebook:active { background: url(facebook-pushed.png) top center no-repeat; }
 
 a.twitter { background: url(images/twitter.png) top center no-repeat; }
