@@ -33,8 +33,8 @@ gem 'paperclip'
 gem 'carrierwave'
 group :production do
   gem 'pg',             '0.17.1'
-  end
-
+ gem 'rails_12factor'
+    end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
