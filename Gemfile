@@ -54,3 +54,4 @@ gem "mocha", group: :test
 gem "font-awesome-rails"
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'gmaps4rails'

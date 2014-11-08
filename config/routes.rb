@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'map_test/index'
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get 'dashboard/index'
-   resources :locations
+  resources :locations
   resources :dashboard
+  resources :map_test
 
   root 'dashboard#index'
 
