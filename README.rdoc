@@ -1,28 +1,15 @@
-== README
+== Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WhatsUp was developed for the Byld Hackathon v6 conducted by IIIT Delhi.
 
-Things you may want to cover:
+== How To Use
 
-* Ruby version
+This app allows you to set updates about the location you are currently at and lets your everyone know about it
 
-* System dependencies
+1. Login to the app using using facebook ID(the app does not ask for any priviledges)
+2. In your home page click on the Check In link to update mention your comments about a place you are currently at.
+3. You can also search for events happening nearby by using the search bar on your Home Page
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Developers
+1. Shrey Bagroy
+2. Ambar Pal
