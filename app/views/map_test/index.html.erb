@@ -1,35 +1,41 @@
-<div style='width: 800px;'>
-	<div id="map" style='width: 800px; height: 400px;'></div>
+<div style='width: 100%'>
+	<div id="map" style='width: 100%; height: 800px;'></div>
 </div>
 <button onclick="yo()">Click Karo Khush Raho</button>
 <script>
 	function yo() {
 		handler = Gmaps.build('Google');
-		handler.buildMap({ internal: {id: 'map'}}, function(){
+		var mapStyle = [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}];
+		handler.buildMap({ internal: {id: 'map'},    provider: {
+			zoom:      3,
+			// center:    new google.maps.LatLng(53.385873, -1.471471),
+			// mapTypeId: google.maps.MapTypeId.ROADMAP,
+			styles:    mapStyle
+		}}, function(){
 			markers = handler.addMarkers([
-			<% @locations.each do |location| %>
-			{
-				"lat": <%= location.latitude %>,
-				"lng": <%= location.longitude %>,
-				"infowindow": "<%= location.message%>"
-			},
-			<% end %>
-			{
-				"lat": 30,
-				"lng": 40,
-				"infowindow": "hello!2"
-			},
-			{
-				"lat": 0,
-				"lng": 0,
-				"picture": {
-					"url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-					"width":  36,
-					"height": 36
+				<% @locations.each do |location| %>
+				{
+					"lat": <%= location.latitude %>,
+					"lng": <%= location.longitude %>,
+					"infowindow": "<%= location.message%>"
 				},
-				"infowindow": "hello!"
-			}		
-			]);
+				<% end %>
+				{
+					"lat": 30,
+					"lng": 40,
+					"infowindow": "hello!2"
+				},
+				{
+					"lat": 0,
+					"lng": 0,
+					"picture": {
+						"url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+						"width":  36,
+						"height": 36
+					},
+					"infowindow": "hello!"
+				}		
+				]);
 		});
 	}
 	function mo () {
